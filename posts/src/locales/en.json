@@ -1,0 +1,22 @@
+{
+    "title": "Posts",
+    "addPost": "Add New Post",
+    "editPost": "Edit Post",
+    "postTitle": "Title",
+    "body": "Body",
+    "Save": "Save",
+    "Cancel": "Cancel",
+    "prev": "Previous",
+    "next": "Next",
+    "postTitleInp": "Enter the title of the post",
+    "postContent": "Enter post content",
+    "edit": "Edit",
+    "delete": "Delete",
+    "error": {
+      "addPost": "Error adding post!",
+      "updatePost": "Error updating post!",
+      "deletePost": "Error deleting post!",
+      "loadPosts": "Error loading posts!"
+    }
+  }
+  
