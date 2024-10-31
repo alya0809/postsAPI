@@ -118,19 +118,20 @@ export default {
       try {
         const postData = {
           ...newPost.value,
-          id: isEditMode.value ? newPost.value.id : Date.now(),
-          userId: newPost.value.userId || 1,
+          userId: newPost.value.userId || 1, 
         };
 
         if (isEditMode.value) {
-          const updatedPost = await PostController.updatePost(postData);
+          // Обновляем пост через сервис updatePost
+          const updatedPost = await PostController.updatePost(postData); 
           const index = posts.value.findIndex(post => post.id === updatedPost.id);
           if (index !== -1) {
             posts.value[index] = updatedPost;
           }
         } else {
-          const createdPost = { ...postData };
-          posts.value.unshift(createdPost);
+          // Создаем новый пост через сервис addPost
+          const createdPost = await PostController.addPost(postData);
+          posts.value.unshift(createdPost); 
         }
 
         closeModal();
